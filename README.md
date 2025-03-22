@@ -4,7 +4,7 @@ Cette API permet de gérer des tâches (création, lecture, mise à jour, suppre
 
 ## Prérequis
 
-- **Java 17** (ou supérieur)
+- **Java 17, 21** (ou supérieur)
 - **Maven** (pour la gestion des dépendances)
 - **PostgreSQL** (installé et configuré localement)
 
@@ -36,7 +36,10 @@ DELETE	      /tasks/delete?taskId=1	    Supprimer une tâche par ID
 PUT	          /tasks/update/{taskId}	    Mettre à jour une tâche par ID
 GET	          /tasks/by-status	            Filtrer les tâches par statut
 
-5. **Exemples de requêtes :** :
+5. **Lien Swagger :** :
+    http://localhost:9005/swagger-ui/index.html
+
+6. **Exemples de requêtes :** :
     -Créer une tâche :
      POST http://localhost:9005/tasks/create 
         {
