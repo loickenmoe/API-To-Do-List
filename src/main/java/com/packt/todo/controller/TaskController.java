@@ -36,7 +36,7 @@ public class TaskController {
     }
 
     //first end point for my "findAll" service
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<ApiResponse> getAllTasks() {
         return ResponseEntity.ok(new ApiResponse("Task fetch successfully", taskService.findAll()));
     }
@@ -61,7 +61,7 @@ public class TaskController {
     }
 
     //end point for my "findByStatus" service
-    @GetMapping("/by-status")
+    @GetMapping("/show_by_status")
     public ResponseEntity<ApiResponse> findByStatus(@RequestParam String status){
         try {
             return ResponseEntity.ok(new ApiResponse("Task find by status", taskService.findByStatus(status)));
